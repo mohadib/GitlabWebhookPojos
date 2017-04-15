@@ -4,7 +4,7 @@ Pojos for marshaling Gitlab webhook events.
 Currently only fully works for Push and Merge request events.
 Uses Jackson.
 
-```
+```java
 package com.tlc;
 
 import org.openactive.gitlab.webhook.domain.GitlabEvent;
