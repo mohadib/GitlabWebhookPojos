@@ -60,7 +60,10 @@ public class Main
          msg = String.format( "%s: Merge request from %s *merged*", projectName, userName );
       }
 
-      bot.say( msg );
+      if( !msg.trim().isEmpty() )
+      {
+         bot.say( msg );
+      }
    }
 
    public static void main( String[] args )
