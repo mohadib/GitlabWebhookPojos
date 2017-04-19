@@ -51,8 +51,34 @@ public class GitlabEvent
    @JsonProperty("commits")
    private List<Commit> commits;
 
+   @JsonProperty("commit")
+   private Commit commit;
+
    @JsonProperty("user")
    private User user;
+
+   @JsonProperty("builds")
+   private List<Build> builds;
+
+   public List<Build> getBuilds()
+   {
+      return builds;
+   }
+
+   public void setBuilds( List<Build> builds )
+   {
+      this.builds = builds;
+   }
+
+   public Commit getCommit()
+   {
+      return commit;
+   }
+
+   public void setCommit( Commit commit )
+   {
+      this.commit = commit;
+   }
 
    @JsonProperty("object_attributes")
    private Attributes attributes;

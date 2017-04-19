@@ -3,11 +3,37 @@ package org.openactive.gitlab.webhook.domain;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.List;
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Attributes
 {
    @JsonProperty("id")
    private long id;
+
+   @JsonProperty("ref")
+   private String ref;
+
+   @JsonProperty("tag")
+   private boolean tag;
+
+   @JsonProperty("sha")
+   private String sha;
+
+   @JsonProperty("before_sha")
+   private String beforeSha;
+
+   @JsonProperty("status")
+   private String status;
+
+   @JsonProperty("stages")
+   private List<String> stages;
+
+   @JsonProperty("finished_at")
+   private String finishedAt;
+
+   @JsonProperty("duration")
+   private long duration;
 
    @JsonProperty("target_branch")
    private String targetBranch;
@@ -77,6 +103,87 @@ public class Attributes
 
    @JsonProperty("assignee")
    private Assignee assignee;
+
+
+   public String getRef()
+   {
+      return ref;
+   }
+
+   public void setRef( String ref )
+   {
+      this.ref = ref;
+   }
+
+   public boolean isTag()
+   {
+      return tag;
+   }
+
+   public void setTag( boolean tag )
+   {
+      this.tag = tag;
+   }
+
+   public String getSha()
+   {
+      return sha;
+   }
+
+   public void setSha( String sha )
+   {
+      this.sha = sha;
+   }
+
+   public String getBeforeSha()
+   {
+      return beforeSha;
+   }
+
+   public void setBeforeSha( String beforeSha )
+   {
+      this.beforeSha = beforeSha;
+   }
+
+   public String getStatus()
+   {
+      return status;
+   }
+
+   public void setStatus( String status )
+   {
+      this.status = status;
+   }
+
+   public List<String> getStages()
+   {
+      return stages;
+   }
+
+   public void setStages( List<String> stages )
+   {
+      this.stages = stages;
+   }
+
+   public String getFinishedAt()
+   {
+      return finishedAt;
+   }
+
+   public void setFinishedAt( String finishedAt )
+   {
+      this.finishedAt = finishedAt;
+   }
+
+   public long getDuration()
+   {
+      return duration;
+   }
+
+   public void setDuration( long duration )
+   {
+      this.duration = duration;
+   }
 
    @JsonProperty("assignee")
    public Assignee getAssignee()
