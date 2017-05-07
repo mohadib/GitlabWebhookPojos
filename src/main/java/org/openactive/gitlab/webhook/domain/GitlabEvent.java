@@ -57,8 +57,41 @@ public class GitlabEvent
    @JsonProperty("user")
    private User user;
 
+   @JsonProperty("assignee")
+   private User assignee;
+
    @JsonProperty("builds")
    private List<Build> builds;
+
+   @JsonProperty("object_attributes")
+   private Attributes attributes;
+
+   @JsonProperty("merge_request")
+   private Attributes mergeRequest;
+
+   @JsonProperty("work_in_progress")
+   private boolean workInProgress;
+
+
+   public User getAssignee()
+   {
+      return assignee;
+   }
+
+   public void setAssignee( User assignee )
+   {
+      this.assignee = assignee;
+   }
+
+   public boolean isWorkInProgress()
+   {
+      return workInProgress;
+   }
+
+   public void setWorkInProgress( boolean workInProgress )
+   {
+      this.workInProgress = workInProgress;
+   }
 
    public List<Build> getBuilds()
    {
@@ -80,8 +113,16 @@ public class GitlabEvent
       this.commit = commit;
    }
 
-   @JsonProperty("object_attributes")
-   private Attributes attributes;
+
+   public Attributes getMergeRequest()
+   {
+      return mergeRequest;
+   }
+
+   public void setMergeRequest( Attributes mergeRequest )
+   {
+      this.mergeRequest = mergeRequest;
+   }
 
    @JsonProperty("object_attributes")
    public Attributes getAttributes()

@@ -14,6 +14,33 @@ public class Attributes
    @JsonProperty("ref")
    private String ref;
 
+   @JsonProperty("note")
+   private String note;
+
+   @JsonProperty("noteable_type")
+   private String noteableType;
+
+   @JsonProperty("project_id")
+   private long projectId;
+
+   @JsonProperty("attachment")
+   private String attachment;
+
+   @JsonProperty("line_code")
+   private String lineCode;
+
+   @JsonProperty("commit_id")
+   private String commitId;
+
+   @JsonProperty("noteable_id")
+   private long noteableId;
+
+   @JsonProperty("system")
+   private boolean system;
+
+   @JsonProperty("st_diff")
+   private boolean stDiff;
+
    @JsonProperty("tag")
    private boolean tag;
 
@@ -80,6 +107,12 @@ public class Attributes
    @JsonProperty("iid")
    private long iid;
 
+   @JsonProperty("position")
+   private long position;
+
+   @JsonProperty("locked_at")
+   private Object locked_at;
+
    @JsonProperty("description")
    private String description;
 
@@ -104,6 +137,116 @@ public class Attributes
    @JsonProperty("assignee")
    private Assignee assignee;
 
+
+   public long getPosition()
+   {
+      return position;
+   }
+
+   public void setPosition( long position )
+   {
+      this.position = position;
+   }
+
+   public Object getLocked_at()
+   {
+      return locked_at;
+   }
+
+   public void setLocked_at( Object locked_at )
+   {
+      this.locked_at = locked_at;
+   }
+
+   public String getNote()
+   {
+      return note;
+   }
+
+   public void setNote( String note )
+   {
+      this.note = note;
+   }
+
+   public String getNoteableType()
+   {
+      return noteableType;
+   }
+
+   public void setNoteableType( String noteableType )
+   {
+      this.noteableType = noteableType;
+   }
+
+   public long getProjectId()
+   {
+      return projectId;
+   }
+
+   public void setProjectId( long projectId )
+   {
+      this.projectId = projectId;
+   }
+
+   public String getAttachment()
+   {
+      return attachment;
+   }
+
+   public void setAttachment( String attachment )
+   {
+      this.attachment = attachment;
+   }
+
+   public String getLineCode()
+   {
+      return lineCode;
+   }
+
+   public void setLineCode( String lineCode )
+   {
+      this.lineCode = lineCode;
+   }
+
+   public String getCommitId()
+   {
+      return commitId;
+   }
+
+   public void setCommitId( String commitId )
+   {
+      this.commitId = commitId;
+   }
+
+   public long getNoteableId()
+   {
+      return noteableId;
+   }
+
+   public void setNoteableId( long noteableId )
+   {
+      this.noteableId = noteableId;
+   }
+
+   public boolean isSystem()
+   {
+      return system;
+   }
+
+   public void setSystem( boolean system )
+   {
+      this.system = system;
+   }
+
+   public boolean isStDiff()
+   {
+      return stDiff;
+   }
+
+   public void setStDiff( boolean stDiff )
+   {
+      this.stDiff = stDiff;
+   }
 
    public String getRef()
    {

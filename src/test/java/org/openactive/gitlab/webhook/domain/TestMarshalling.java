@@ -8,6 +8,16 @@ import java.io.IOException;
 
 public class TestMarshalling
 {
+
+   @Test
+   public void testMarshallMROpen() throws IOException
+   {
+      ObjectMapper mapper = new ObjectMapper();
+      GitlabEvent event = mapper.readValue( TestMarshalling.class.getResource( "/mr_open.json" ), GitlabEvent.class );
+      assertNotNull( event );
+      assertEquals( "merge_request", event.getObjectKind() );
+   }
+
    @Test
    public void testMarshallPiplineEvent() throws IOException
    {
@@ -20,4 +30,16 @@ public class TestMarshalling
       assertEquals( "success", event.getAttributes().getStatus() );
       assertEquals( 63, event.getAttributes().getDuration() );
    }
+
+   @Test
+   public void testMarshallCommentEvent() throws IOException
+   {
+      ObjectMapper mapper = new ObjectMapper();
+      GitlabEvent event = mapper.readValue( TestMarshalling.class.getResource( "/mr_comment.json" ), GitlabEvent.class );
+      assertNotNull( event );
+      assertEquals( "note", event.getObjectKind() );
+      assertEquals( "MergeRequest", event.getAttributes().getNoteableType() );
+      assertEquals( "This MR needs work.", event.getAttributes().getNote() );
+   }
+
 }
