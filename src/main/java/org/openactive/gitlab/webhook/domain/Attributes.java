@@ -107,8 +107,11 @@ public class Attributes
    @JsonProperty("iid")
    private long iid;
 
+   @JsonProperty("original_position")
+   private Object position;
+
    @JsonProperty("position")
-   private long position;
+   private Object originalPosition;
 
    @JsonProperty("locked_at")
    private Object locked_at;
@@ -137,13 +140,245 @@ public class Attributes
    @JsonProperty("assignee")
    private Assignee assignee;
 
+   @JsonProperty("updated_by_id")
+   private Long updatedById;
 
-   public long getPosition()
+   @JsonProperty("type")
+   private String type;
+
+   @JsonProperty("resolved_by_id")
+   private Long resolvedById;
+
+   @JsonProperty("resolved_at")
+   private String resolvedAt;
+
+
+   @JsonProperty("discussion_id")
+   private String discussionId;
+
+   @JsonProperty("merge_error")
+   private Object mergeError;
+
+   @JsonProperty("merge_params")
+   private Object mergeParams;
+
+   @JsonProperty("merge_when_pipeline_succeeds")
+   private boolean mergeWhenPipelineSucceeds;
+
+   @JsonProperty("merge_user_id")
+   private Long mergeUserId;
+
+
+   @JsonProperty("merge_commit_sha")
+   private String mergeCommitSha;
+
+   @JsonProperty("deleted_at")
+   private String deletedAt;
+
+   @JsonProperty("in_progress_merge_commit_sha")
+   private String inProgressMergeCommitSha;
+
+   @JsonProperty("lock_version")
+   private Object lockVersion;
+
+   @JsonProperty("time_estimate")
+   private Object timeEstimate;
+
+   @JsonProperty("total_time_spent")
+   private Object totalTimeSpent;
+
+   @JsonProperty("human_total_time_spent")
+   private Object humanTotalTimeSpent;
+
+   @JsonProperty("human_time_estimate")
+   private Object humanTimeEstimate;
+
+   public Object getTotalTimeSpent()
+   {
+      return totalTimeSpent;
+   }
+
+   public void setTotalTimeSpent( Object totalTimeSpent )
+   {
+      this.totalTimeSpent = totalTimeSpent;
+   }
+
+   public Object getHumanTotalTimeSpent()
+   {
+      return humanTotalTimeSpent;
+   }
+
+   public void setHumanTotalTimeSpent( Object humanTotalTimeSpent )
+   {
+      this.humanTotalTimeSpent = humanTotalTimeSpent;
+   }
+
+   public Object getHumanTimeEstimate()
+   {
+      return humanTimeEstimate;
+   }
+
+   public void setHumanTimeEstimate( Object humanTimeEstimate )
+   {
+      this.humanTimeEstimate = humanTimeEstimate;
+   }
+
+   public Object getTimeEstimate()
+   {
+      return timeEstimate;
+   }
+
+   public void setTimeEstimate( Object timeEstimate )
+   {
+      this.timeEstimate = timeEstimate;
+   }
+
+   public String getInProgressMergeCommitSha()
+   {
+      return inProgressMergeCommitSha;
+   }
+
+   public void setInProgressMergeCommitSha( String inProgressMergeCommitSha )
+   {
+      this.inProgressMergeCommitSha = inProgressMergeCommitSha;
+   }
+
+   public Object getLockVersion()
+   {
+      return lockVersion;
+   }
+
+   public void setLockVersion( Object lockVersion )
+   {
+      this.lockVersion = lockVersion;
+   }
+
+   public String getMergeCommitSha()
+   {
+      return mergeCommitSha;
+   }
+
+   public void setMergeCommitSha( String mergeCommitSha )
+   {
+      this.mergeCommitSha = mergeCommitSha;
+   }
+
+   public String getDeletedAt()
+   {
+      return deletedAt;
+   }
+
+   public void setDeletedAt( String deletedAt )
+   {
+      this.deletedAt = deletedAt;
+   }
+
+   public Object getMergeParams()
+   {
+      return mergeParams;
+   }
+
+   public void setMergeParams( Object mergeParams )
+   {
+      this.mergeParams = mergeParams;
+   }
+
+   public boolean isMergeWhenPipelineSucceeds()
+   {
+      return mergeWhenPipelineSucceeds;
+   }
+
+   public void setMergeWhenPipelineSucceeds( boolean mergeWhenPipelineSucceeds )
+   {
+      this.mergeWhenPipelineSucceeds = mergeWhenPipelineSucceeds;
+   }
+
+   public Long getMergeUserId()
+   {
+      return mergeUserId;
+   }
+
+   public void setMergeUserId( Long mergeUserId )
+   {
+      this.mergeUserId = mergeUserId;
+   }
+
+   public Object getMergeError()
+   {
+      return mergeError;
+   }
+
+   public void setMergeError( Object mergeError )
+   {
+      this.mergeError = mergeError;
+   }
+
+   public String getDiscussionId()
+   {
+      return discussionId;
+   }
+
+   public void setDiscussionId( String discussionId )
+   {
+      this.discussionId = discussionId;
+   }
+
+   public Long getResolvedById()
+   {
+      return resolvedById;
+   }
+
+   public void setResolvedById( Long resolvedById )
+   {
+      this.resolvedById = resolvedById;
+   }
+
+   public String getResolvedAt()
+   {
+      return resolvedAt;
+   }
+
+   public void setResolvedAt( String resolvedAt )
+   {
+      this.resolvedAt = resolvedAt;
+   }
+
+   public Object getOriginalPosition()
+   {
+      return originalPosition;
+   }
+
+   public void setOriginalPosition( Object originalPosition )
+   {
+      this.originalPosition = originalPosition;
+   }
+
+   public String getType()
+   {
+      return type;
+   }
+
+   public void setType( String type )
+   {
+      this.type = type;
+   }
+
+   public Long getUpdatedById()
+   {
+      return updatedById;
+   }
+
+   public void setUpdatedById( Long updatedById )
+   {
+      this.updatedById = updatedById;
+   }
+
+   public Object getPosition()
    {
       return position;
    }
 
-   public void setPosition( long position )
+   public void setPosition( Object position )
    {
       this.position = position;
    }

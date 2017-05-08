@@ -42,4 +42,15 @@ public class TestMarshalling
       assertEquals( "This MR needs work.", event.getAttributes().getNote() );
    }
 
+   @Test
+   public void testMarshallLineCommentEvent() throws IOException
+   {
+      ObjectMapper mapper = new ObjectMapper();
+      GitlabEvent event = mapper.readValue( TestMarshalling.class.getResource( "/mr_line_comment.json" ), GitlabEvent.class );
+      assertNotNull( event );
+      assertEquals( "note", event.getObjectKind() );
+      assertEquals( "MergeRequest", event.getAttributes().getNoteableType() );
+      assertEquals( "asd", event.getAttributes().getNote() );
+   }
+
 }
